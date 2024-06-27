@@ -1,13 +1,13 @@
 <?php
 $nombres = readline("ingrese nombre: ");
-$contraseña = readline("ingrese contraseña");
+$contraseña = readline("ingrese contraseña: ");
 $empleados = [];
 
 if($nombres == "camilo" && $contraseña == 1908) {
     $numero = readline("ingrese el numero de empleados a registrar: ");
     for($i=0; $i <=$numero; $i++) {
         echo"persona $i: ";
-        $dni = readline("DNI: ");
+        $dni = readline("dni: ");
         $nombre = readline("nombre: ");
         $estatura = readline("estatura: ");
         $edad = readline("edad: ");
@@ -16,7 +16,7 @@ if($nombres == "camilo" && $contraseña == 1908) {
         $fuma = readline("fuma: ");
 
         $empleado =[
-            "DNI" => $dni,
+            "dni" => $dni,
             "nombre" => $nombre,
             "estatura" => $estatura,
             "edad" => $edad,
@@ -31,15 +31,15 @@ if($nombres == "camilo" && $contraseña == 1908) {
 
         foreach ($empleados as $empleado) {
             if($empleado["nombre"] == $nombreBuscado && $empleado["dni"] == $dniBuscado){
-                echo "DNI: ". $empleado["dni"];
+                echo "dni: ". $empleado["dni"];
                 echo "nombre: ". $empleado["nombre"];
                 echo "estatura: ". $empleado["estatura"];
                 echo "edad: ". $empleado["edad"];
                 echo "genero: ". $empleado["genero"];
                 echo "peso: ". $empleado["peso"];
-                echo "fuma?" . $empleado["fuma"];
+                echo "fuma: " . $empleado["fuma"];
             break;
-            }else {
+            }else{
                 echo "el empleado no existe";
             }
         }
