@@ -46,3 +46,4 @@ if($nombres == "camilo" && $contraseña == 1908) {
 }else {
     echo "el inicio de sesion no es correcto verifique nombre o contraseña";
 }
+?>
