@@ -30,20 +30,19 @@ if($nombres == "camilo" && $contraseña == 1908) {
     $dniBuscado = readline("ingrese el dni del empleado: ");
 
         foreach ($empleados as $empleado) {
-            if($empleado["nombre"] == $nombreBuscado && $empleado["dni"] == $dniBuscado){
-                echo "dni: ". $empleado["dni"];
-                echo "nombre: ". $empleado["nombre"];
-                echo "estatura: ". $empleado["estatura"];
-                echo "edad: ". $empleado["edad"];
-                echo "genero: ". $empleado["genero"];
-                echo "peso: ". $empleado["peso"];
-                echo "fuma: " . $empleado["fuma"];
-            break;
-            }else{
-                echo "el empleado no existe";
-            }
-        }
-        }else{
-            echo "el inicio de sesion no es correcto verifique nombre o contraseña";
-        }
-?>
+            if ($empleado["nombre"] == $nombreBuscado && $empleado["dni"] == $dniBuscado) {
+                echo " dni: ". $empleado["dni"];
+                echo " nombre: ". $empleado["nombre"];
+                echo " estatura: ". $empleado["estatura"];
+                echo " edad: ". $empleado["edad"];
+                echo " genero: ". $empleado["genero"];
+                echo " peso: ". $empleado["peso"];
+                echo " fuma: " . $empleado["fuma"];
+        break;
+    }else {
+        echo "el empleado no existe";
+    }
+}
+}else {
+    echo "el inicio de sesion no es correcto verifique nombre o contraseña";
+}
